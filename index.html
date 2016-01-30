@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Patterns design</title>
+		<meta name="description" content="Curso de patrones de diseño">
+		<meta name="author" content="Alberto Gaona">
+ 		<meta name="viewport" content="user-scalable=0,width=device-width,initial-scale=1,maximum-scale=1">
+  		<link rel="stylesheet" href="CSS/main.css">
+
+  		
+	</head>
+
+	<body>
+		<!-- Navigation map -->
+		<nav id = "navigationMap">
+			<ul class="links-to-floor">
+				<li class="ascensorLink ascensorLink0"><span>1</span></li>
+				<li class="ascensorLink ascensorLink1"><span>2</span></li>
+				<li class="ascensorLink ascensorLink2"><span>3</span></li>
+				<li class="ascensorLink ascensorLink3"><span>4</span></li>
+				<li class="ascensorLink ascensorLink4"><span>5</span></li>
+				<li class="ascensorLink ascensorLink5"><span>6</span></li>
+				<li class="ascensorLink ascensorLink6"><span>7</span></li>
+				<li class="ascensorLink ascensorLink7"><span>8</span></li>
+				<li class="ascensorLink ascensorLink8"><span>9</span></li>
+				<li class="ascensorLink ascensorLink9"><span>10</span></li>
+				<li class="ascensorLink ascensorLink10"><span>11</span></li>
+				<li class="ascensorLink ascensorLink11"><span>12</span></li>
+				<li class="ascensorLink ascensorLink12"><span>13</span></li>
+				<li class="ascensorLink ascensorLink13"><span>14</span></li>
+				<li class="ascensorLink ascensorLink14"><span>15</span></li>
+				<li class="ascensorLink ascensorLink15"><span>16</span></li>
+				<li class="ascensorLink ascensorLink16"><span>17</span></li>
+				<li class="ascensorLink ascensorLink17"><span>18</span></li>
+				<li class="ascensorLink ascensorLink18"><span>19</span></li>
+				<li class="ascensorLink ascensorLink19"><span>20</span></li>
+			</ul>
+			<ul class="direction-links">
+				<li class="direction up" data-direction="up"><a>↑</a></li>
+				<li class="direction down" data-direction="down"><a>↓</a></li>
+				<li class="direction left" data-direction="left"><a>←</a></li>
+				<li class="direction right" data-direction="right"><a>→</a></li>
+			</ul>
+		</nav>
+
+		<div id="ascensorLink">
+	  		<!-- Home -->
+		  	<section>
+		  		<article class="container">
+		  			<h1>Patrones de diseño.</h1>
+		  			<p>Representan las mejores practicas usadas por desarrolladores de software orientado a objetos.<br/>
+		  			Los patrones de diseño son soluciones a problemas generales</p>
+		  			<p><a href="www.github.com/betogaona7/patrones/implementation">Descargar codigos</a></p>
+		  		</article>
+		  	</section>
+		</div>
+		
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script src="js/jquery.ascensor.js"></script>
+
+
+		<script>
+			var ascensor = $('#navigationMap').ascensor({loop: "loop-x", direction: [
+				[0,0],[0,1],[0,2],
+				[1,0],[1,1],[1,2],
+				[2,0],[2,1],[2,2], 
+				[3,0],[3,1],[3,2], 
+				[4,0],[4,1],[4,2], 
+				[5,0],[5,1],[5,2],
+				[6,0],[6,1],[6,2]]
+			});
+			var ascensorInstance = $('#navigationMap').data('ascensor');
+			var floorAdded = false;
+			$(".add-floor").click(function(){
+				if(!floorAdded){
+				$('#navigationMap').append('<div class="floor floor-8"><span class="text">This floor has been dynamically appended!</span></div>');
+				ascensorInstance.refresh();
+				$(this).text("Floor Added!");
+				floorAdded = true;
+				}
+			});
+				
+			$(".links-to-floor li").click(function(event, index) {
+				ascensorInstance.scrollToFloor($(this).index());
+			});
+			$(".links-to-floor li:eq("+ ascensor.data("current-floor") +")").addClass("selected");
+			ascensor.on("scrollStart", function(event, floor){
+				$(".links-to-floor li").removeClass("selected");
+				$(".links-to-floor li:eq("+floor.to+")").addClass("selected");
+			});
+			$(".prev").click(function() {
+				ascensorInstance.prev();
+			});
+				
+			$(".next").click(function() {
+				ascensorInstance.next();
+			});
+				
+			$(".direction").click(function() {
+				ascensorInstance.scrollToDirection($(this).data("direction"));
+			});	
+		</script>
+	</body>
+</html>
