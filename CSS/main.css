@@ -4,19 +4,19 @@
 /* Main.css propery of kirkas.ch/ascensor */
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{
-	display:block
+	display:block;
 	}
 
 audio,canvas,video{
-	display:inline-block
+	display:inline-block;
 	}
 
 audio:not([controls]){
-	display:none;height:0
+	display:none;height:0;
 	}
 
 [hidden],template{
-	display:none
+	display:none;
 	}
 
 html{
@@ -26,37 +26,36 @@ html{
 	}
 
 body{
-	margin:0
+	margin:0;
 	}
 
 a{
-	background:transparent
+	background:transparent;
 	}
 
 a:focus{
-	outline:thin dotted
+	outline:thin dotted;
 	}
 
 a:active,a:hover{
-	outline:0
+	outline:0;
 	}
 
 h1{
 	font-size:2em;
-	margin:0.67em 0
+	margin:0.67em 0;
 	}
 
 abbr[title]{
-	border-bottom:1px 
-	dotted
+	border-bottom:1px dotted;
 	}
 
 b,strong{
-	font-weight:bold
+	font-weight:bold;
 	}
 
 dfn{
-	font-style:italic
+	font-style:italic;
 	}
 
 hr{
@@ -67,62 +66,61 @@ hr{
 
 mark{
 	background:#ff0;
-	color:#000
+	color:#000;
 	}
 
 code,kbd,pre,samp{
 	font-family:monospace,serif;
-	font-size:1em
+	font-size:1em;
 	}
 
 pre{
-	white-space:pre-wrap
+	white-space:pre-wrap;
 	}
 
 q{
-	quotes:"\201C" "\201D" "\2018" "\2019"
+	quotes:"\201C" "\201D" "\2018" "\2019";
 	}
 
 small{
-	font-size:80%
+	font-size:80%;
 	}
 
 sub,sup{
 	font-size:75%;
 	line-height:0;
 	position:relative;
-	vertical-align:baseline
+	vertical-align:baseline;
 	}
 
 sup{
-	top:-0.5em
+	top:-0.5em;
 	}
 
-sub{bottom:-0.25em
+sub{bottom:-0.25em;
 	}
 
 img{
-	border:0
+	border:0;
 	}
 
 svg:not(:root){
-	overflow:hidden
+	overflow:hidden;
 }
 
 figure{
-	margin:0
+	margin:0;
 	}
 
 fieldset{
-	border:1px 
-	solid #c0c0c0;
+	border:1px solid #c0c0c0;
 	margin:0 2px;
-	padding:0.35em 0.625em 0.75em
+	padding:0.35em 0.625em 0.75em;
 	}
 
 legend{
 	border:0;
-	padding:0
+	padding:0;
 	}
 
 button,input,select,textarea{
@@ -132,124 +130,124 @@ button,input,select,textarea{
 	}
 
 button,input{
-	line-height:normal
+	line-height:normal;
 	}
 
 button,select{
-	text-transform:none
+	text-transform:none;
 	}
 
 button,html input[type="button"],input[type="reset"],input[type="submit"]{
 	-webkit-appearance:button;
-	cursor:pointer
+	cursor:pointer;
 	}
 
 button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{
 	box-sizing:border-box;
-	padding:0
+	padding:0;
 	}
 
 input[type="search"]{
 	-webkit-appearance:textfield;
 	-moz-box-sizing:content-box;
 	-webkit-box-sizing:content-box;
-	box-sizing:content-box
+	box-sizing:content-box;
 	}
 
 input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{
-	-webkit-appearance:none
+	-webkit-appearance:none;
 	}
 
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{
 	overflow:auto;
-	vertical-align:top
+	vertical-align:top;
 }
 
 table{
 	border-collapse:collapse;
-	border-spacing:0
+	border-spacing:0;
 	}
 
 ul{
-	list-style:none
+	list-style:none;
 	}
 
 .pln{
-	color:#4d4d4c
+	color:#4d4d4c;
 	}
 
 .str{
-	color:#718c00
+	color:#718c00;
 	}
 
 .kwd{
-	color:#8959a8
+	color:#8959a8;
 	}
 
 .com{
 	color:#8e908c;
-	font-style:italic
+	font-style:italic;
 	}
 
 .typ{
-	color:#f5871f
+	color:#f5871f;
 	}
 
 .lit{
-	color:#eab700
+	color:#eab700;
 	}
 
 .pun{
-	color:#4d4d4c
+	color:#4d4d4c;
 	}
 
 .opn{
-	color:#4d4d4c
+	color:#4d4d4c;
 	}
 
 .clo{
-	color:#4d4d4c
+	color:#4d4d4c;
 	}
 
 .tag{
-	color:#c82829
+	color:#c82829;
 	}
 
 .atn{
-	color:#eab700
+	color:#eab700;
 	}
 
 .atv{
-	color:#3e999f
+	color:#3e999f;
 	}
 
 .dec{
-	color:#f5871f
+	color:#f5871f;
 	}
 
 .var{
-	color:#c82829
+	color:#c82829;
 	}
 
 .fun{
-	color:#c82829
+	color:#c82829;
 	}
 
 pre.prettyprint{
 	background-color:#fff;
 	padding:5px 10px;
 	border:1px solid #f1f1f1;
-	border-radius:3px
+	border-radius:3px;
 }
 
 ol.linenums{
 	color:#8e908c;
-	margin:0 0 0 40px
+	margin:0 0 0 40px;
 }
 
 ol.linenums li{
 	line-height:18px;
-	padding-left:12px
+	padding-left:12px;
 }
 
 @media print{pre{background-color:none}pre .str,code .str{color:#060}pre .kwd,code .kwd{color:#006;font-weight:normal}pre .com,code .com{color:#600;font-style:italic}pre .typ,code .typ{color:#404;font-weight:normal}pre .lit,code .lit{color:#044}pre .pun,code .pun{color:#440}pre .pln,code .pln{color:#000}pre .tag,code .tag{color:#006;font-weight:normal}pre .atn,code .atn{color:#404}pre .atv,code .atv{color:#060}}*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
@@ -269,7 +267,7 @@ html{
 	}
 
 pre{
-	font-family:"Inconsolata", sans-serif;line-height:1.1rem
+	font-family:"Inconsolata", sans-serif;line-height:1.1rem;
 	}
 
 a{
@@ -287,14 +285,15 @@ a:hover{
 	width:100%;
 	margin:0 auto;
 	padding-top:120px;
-}h1 img{
+}
+h1 img{
 	max-width:300px
-	}
+}
 
 code{
 	background-color:#eee;
 	padding:2px 7px;
-	border-radius:3px
+	border-radius:3px;
 	}
 
 a.button{
@@ -307,15 +306,17 @@ a.button{
 
 a.button:hover{
 	background-color:#65b7e7;
-	text-decoration:none !important}
+	text-decoration:none !important;
+}
 
 a.button.grey{
 	background-color:#eee;
-	color:#222
+	color:#222;
 	}
 
 a.button.grey:hover{
-	background-color:#fbfbfb}
+	background-color:#fbfbfb;
+}
 
 .links-to-floor{
 	position:absolute;
@@ -343,7 +344,7 @@ a.button.grey:hover{
 	color:#777;
 	line-height:33px;
 	font-size:22px;
-	cursor:pointer
+	cursor:pointer;
 }
 
 .links-to-floor li.selected span{
