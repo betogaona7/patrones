@@ -10,84 +10,40 @@
   		<link rel="stylesheet" href="CSS/main.css">
 
   		<style>
-		*{
-			margin: 0;
-			padding: 0;
-		}		
-		.floor .text {
-			color: white;font-size: 40px;
-			font-weight: 500;
-			text-align: center;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			
-			-moz-transform: translateX(-50%) translateY(-50%);
-			-webkit-transform: translateX(-50%) translateY(-50%);
-			transform: translateX(-50%) translateY(-50%);
-			
-		}
-		
-		li a {
-			padding: 3px 6px; 
-			display: inline-block;
-			background: #eee;
-			border-radius:3px;
-			margin-bottom:2px;
-			color: #777;
-		}
-		li a:hover{
-			cursor:pointer; 
-			background:#fefefe;
-		} 
-		.links-to-floor{
-			position: absolute;
-			left: 20px;
-		}
-		.prev-next-links{
-			position: absolute;
-			top: 20px;
-			right: 20px;
-		}
-		.direction-links li a{
-			border-radius: 0;
-		}
+  			.building{
+  				position: absolute;
+  				overflow: hidden;
+  				top: 0px;
+  				width: 100%;
+  				height: 100%;
+  			}
 
-		.up {
-			position: absolute;
-			bottom: 75px;
-			right: 50px;
-		}
-		.down {
-			position: absolute;
-			bottom: 25px;
-			right: 50px;
-		}
-		.selected a{
-			color: white;
-			background:#4fade3;
-		}
-		.selected a:hover{
-			color: white;
-			background:#4fade3;
-		} 
-		</style> 
+  			.sectionBuilding{
+  				position: absolute;
+  				overflow: auto;
+  				top: 0px;
+  				left: 0px;
+  				width: 100%;
+  				height: 100%;
+  				transform: traslateY(100%) traslateX(0%);
+  			}
+  		</style>
 	</head>
 
 	<body>
 		<!-- Navigation map -->
 		<nav id = "navigationMap">
 			<ul class="links-to-floor">
-				<li class="ascensorLink ascensorLink0"><span>1</span></li>
-				<li class="ascensorLink ascensorLink1"><span>2</span></li>
-				<li class="ascensorLink ascensorLink2"><span>3</span></li>
-				<li class="ascensorLink ascensorLink3"><span>4</span></li>
-				<li class="ascensorLink ascensorLink4"><span>5</span></li>
-				<li class="ascensorLink ascensorLink5"><span>6</span></li>
-				<li class="ascensorLink ascensorLink6"><span>7</span></li>
-				<li class="ascensorLink ascensorLink7"><span>8</span></li>
-				<li class="ascensorLink ascensorLink8"><span>9</span></li>
-				<li class="ascensorLink ascensorLink9"><span>10</span></li>
+				<li class="ascensorLink ascensorLink0 selected" ><span>1 </span></li>
+				<li class="ascensorLink ascensorLink1" ><span>2 </span></li>
+				<li class="ascensorLink ascensorLink2" ><span>3 </span></li>
+				<li class="ascensorLink ascensorLink3" ><span>4 </span></li>
+				<li class="ascensorLink ascensorLink4" ><span>5 </span></li>
+				<li class="ascensorLink ascensorLink5" ><span>6 </span></li>
+				<li class="ascensorLink ascensorLink6" ><span>7 </span></li>
+				<li class="ascensorLink ascensorLink7" ><span>8 </span></li>
+				<li class="ascensorLink ascensorLink8" ><span>9 </span></li>
+				<li class="ascensorLink ascensorLink9" ><span>10</span></li>
 				<li class="ascensorLink ascensorLink10"><span>11</span></li>
 				<li class="ascensorLink ascensorLink11"><span>12</span></li>
 				<li class="ascensorLink ascensorLink12"><span>13</span></li>
@@ -105,9 +61,9 @@
 			</ul>
 		</nav>
 
-		<div id="ascensorLink">
+		<div id="ascensorLink" class="building">
 	  		<!-- Home -->
-		  	<section>
+		  	<section class= "sectionBuilding">
 		  		<article class="container">
 		  			<h1>Patrones de diseño.</h1>
 		  			<p>Representan las mejores practicas usadas por desarrolladores de software orientado a objetos.<br/>
@@ -115,7 +71,57 @@
 		  			<a href="https://github.com/betogaona7/patrones/implementation">Descargar codigos</a>
 		  		</article>
 		  	</section>
+
+		  	<section class="sectionBuilding">
+		  		<article class="container">
+		  			<h1>Gang of Four (GOF).</h1>
+		  			<p>En 1994, 4 autores: Erich Gamma, Richard Helm, Ralph Jhonson and John Vlissides publicaron un libro llamado<br/>
+		  			Design Patterns - Elements of Reusable Object-Oriented Software que inicio el concepto de patrones de diseño <br/>
+		  			en el desarrollo de software.</p>
+		  		</article>
+		  	</section>
+
+		  	<secton class="sectionBuilding">
+		  		<article class="container">
+		  			<h1>Uso de los patrones de diseño.</h1>
+		  			<p>Existen 2 principales usos en el desarrollo de software.</p>
+		  			<p>* Common plataform for developers.</p>
+		  			<p>* Best practices </p>
+		  		</article>
+		  	</secton>
+
+		  	<section class="sectionBuilding">
+		  		<article class="container">
+		  			<h1>Tipos de patrones de diseño.</h1>
+		  			<ul>
+		  				<li> Patrones de creacion. <br/>
+		  					<pre>	Proveen una manera de crear objetos ocultando la logica de creacion.
+		  					</pre>
+		  				</li>
+		  				<li> Patrones de estructura. <br/>
+		  					<pre>	Se enfocan en las clases y composicion de objetos
+		  					</pre>
+		  				</li>
+		  				<li> Patrones de comportamiento. <br/>
+		  					<pre>	Se enfocan especificamente en la comunicacion entre objetos.
+		  					</pre>
+		  				</li>
+		  				<li> Patrones J2EE. <br/>
+		  					<pre>	Se centran en el nivel de presentacion.
+		  					</pre>
+		  				</li>
+		  			</ul>
+		  		</article>
+		  	</section>
 		</div>
+		<script src="jquery.js"></script>
+		<script>
+		$(function(){
+			$("#includedContent").load("test.html");
+		});
+		</script>
+
+		<div id="includedContent"></div>
 		
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script src="js/jquery.ascensor.js"></script>
@@ -132,15 +138,6 @@
 				[6,0],[6,1],[6,2]]
 			});
 			var ascensorInstance = $('#navigationMap').data('ascensor');
-			var floorAdded = false;
-			$(".add-floor").click(function(){
-				if(!floorAdded){
-				$('#navigationMap').append('<div class="floor floor-8"><span class="text">This floor has been dynamically appended!</span></div>');
-				ascensorInstance.refresh();
-				$(this).text("Floor Added!");
-				floorAdded = true;
-				}
-			});
 				
 			$(".links-to-floor li").click(function(event, index) {
 				ascensorInstance.scrollToFloor($(this).index());

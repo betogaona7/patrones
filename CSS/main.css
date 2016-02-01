@@ -467,3 +467,65 @@ a.button.grey:hover{
 }
 .social-button{position:fixed;z-index:40;top:20px;max-width:120px;left:20px}.social-button iframe,.social-button .paypalButton{margin-bottom:6px}@media screen and (min-width: 0px) and (max-width: 720px){.social-button,.links-to-floor{display:none}.container{padding-top:20px}}
 /*# sourceMappingURL=main.css.map */
+
+*{
+			margin: 0;
+			padding: 0;
+		}		
+		.floor .text {
+			color: white;font-size: 40px;
+			font-weight: 500;
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			
+			-moz-transform: translateX(-50%) translateY(-50%);
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+			
+		}
+		
+		li a {
+			padding: 3px 6px; 
+			display: inline-block;
+			background: #eee;
+			border-radius:3px;
+			margin-bottom:2px;
+			color: #777;
+		}
+		li a:hover{
+			cursor:pointer; 
+			background:#fefefe;
+		} 
+		.links-to-floor{
+			position: absolute;
+			left: 20px;
+		}
+		.prev-next-links{
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+		.direction-links li a{
+			border-radius: 0;
+		}
+
+		.up {
+			position: absolute;
+			bottom: 75px;
+			right: 50px;
+		}
+		.down {
+			position: absolute;
+			bottom: 25px;
+			right: 50px;
+		}
+		.selected a{
+			color: white;
+			background:#4fade3;
+		}
+		.selected a:hover{
+			color: white;
+			background:#4fade3;
+		} 
