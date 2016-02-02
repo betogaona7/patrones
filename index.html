@@ -25,12 +25,55 @@
   				left: 0px;
   				width: 100%;
   				height: 100%;
+  			}
+/* Itroduction */
+  			.translate1_1{
+  				transform: traslateY(300%) traslateX(0%);
+  			}
+  			.translate1_2{
+  				transform: traslateY(200%) traslateX(0%);
+  			}
+  			.translate1_3{
   				transform: traslateY(100%) traslateX(0%);
+  			}
+  			.translate1_4{
+  				transform: traslateY(0%) traslateX(0%);
+  			}
+ /* First pattern */
+ 			.translate2_1{
+ 				transform: traslateY(300%) traslateX(100%);
+ 			}
+ 			.translate2_2{
+ 				transform: traslateY(200%) traslateX(100%);
+ 			}
+ 			.translate2_3{
+ 				transform: traslateY(100%) traslateX(100%);
+ 			}
+/* Second pattern */
+			.translate3_1{
+				transform: traslateY(300%) traslateX(200%);
+			}
+			.translate3_2{
+				transform: traslateY(200%) traslateX(200%);
+			}
+			.translate3_3{
+				transform: traslateY(100%) traslateX(200%);
+			}
+
+
+  			.iFrameStyle{
+  				position: absolute;
+  				visibility: hidden;
+  				display: none;
+  				width: 0px;
+  				height: 0px;
+  				padding: 0px;
+  				border: none;
   			}
   		</style>
 	</head>
 
-	<body>
+	<body style="zoom: 1;">
 		<!-- Navigation map -->
 		<nav id = "navigationMap">
 			<ul class="links-to-floor">
@@ -61,18 +104,19 @@
 			</ul>
 		</nav>
 
-		<div id="ascensorLink" class="building">
+		<div id="ascensorBuilding" class="building">
 	  		<!-- Home -->
-		  	<section class= "sectionBuilding">
+		  	<section class= "sectionBuilding translate1_1">
 		  		<article class="container">
 		  			<h1>Patrones de diseño.</h1>
 		  			<p>Representan las mejores practicas usadas por desarrolladores de software orientado a objetos.<br/>
 		  			Los patrones de diseño son soluciones a problemas generales</p><br/>
-		  			<a href="https://github.com/betogaona7/patrones/implementation">Descargar codigos</a>
+		  			
+		  			<a class="button" href="https://github.com/betogaona7/patrones/implementation">Download codes</a>
 		  		</article>
 		  	</section>
 
-		  	<section class="sectionBuilding">
+		  	<section class="sectionBuilding translate1_2">
 		  		<article class="container">
 		  			<h1>Gang of Four (GOF).</h1>
 		  			<p>En 1994, 4 autores: Erich Gamma, Richard Helm, Ralph Jhonson and John Vlissides publicaron un libro llamado<br/>
@@ -81,7 +125,7 @@
 		  		</article>
 		  	</section>
 
-		  	<secton class="sectionBuilding">
+		  	<secton class="sectionBuilding translate1_3">
 		  		<article class="container">
 		  			<h1>Uso de los patrones de diseño.</h1>
 		  			<p>Existen 2 principales usos en el desarrollo de software.</p>
@@ -90,7 +134,7 @@
 		  		</article>
 		  	</secton>
 
-		  	<section class="sectionBuilding">
+		  	<section class="sectionBuilding translate1_4">
 		  		<article class="container">
 		  			<h1>Tipos de patrones de diseño.</h1>
 		  			<ul>
@@ -113,15 +157,26 @@
 		  			</ul>
 		  		</article>
 		  	</section>
-		</div>
-		<script src="jquery.js"></script>
-		<script>
-		$(function(){
-			$("#includedContent").load("test.html");
-		});
-		</script>
+<!-- First pattern -->
 
-		<div id="includedContent"></div>
+		  	<section class= "sectionBuilding translate2_1">
+		  		<article class="container">
+		  			<h1>Factory pattern.</h1>
+		  			<p>Crear objetos sin exponer la creacion logica</p><br/>
+		  		</article>
+		  	</section>
+
+		  	<section class= "sectionBuilding translate2_2">
+		  		<article class="container">
+		  			<h1>Implementacion.</h1>
+		  			<p>Imagen</p><br/>
+		  		</article>
+		  	</section>
+
+		</div>
+		
+
+<!--		<div id="includedContent"></div>
 		
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script src="js/jquery.ascensor.js"></script>
@@ -158,6 +213,26 @@
 			$(".direction").click(function() {
 				ascensorInstance.scrollToDirection($(this).data("direction"));
 			});	
-		</script>
+		</script> -->
+		<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+		<script src="plugin.min.js"></script>
+		<script src="main.min.js"></script>
+
+		<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true"
+		allowfullscree="true" class="iFrameStyle">
+			#document
+			<html class="SandboxRoot">
+				<head>
+				<style type="text/css">
+				.SandboxRoot{
+					display: none;
+				}
+				</style>
+				<base target="_blank">
+				</head>
+				<body>
+				</body>
+			</html>
+		</iframe>
 	</body>
 </html>
