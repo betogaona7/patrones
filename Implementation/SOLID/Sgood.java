@@ -7,7 +7,7 @@ interface IEmail {
 	public void setContent (IContent content);
 }
 
-interface Content {
+interface IContent {
 	public String getAsString(); //used for serialization
 }
 
